@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Animaldto {
+public class AnimalDTO {
     String name;
     String type;
 }

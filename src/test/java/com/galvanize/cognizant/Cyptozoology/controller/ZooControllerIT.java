@@ -1,7 +1,7 @@
 package com.galvanize.cognizant.Cyptozoology.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.galvanize.cognizant.Cyptozoology.model.Animaldto;
+import com.galvanize.cognizant.Cyptozoology.model.AnimalDTO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -27,7 +27,7 @@ public class ZooControllerIT {
 
     @Test
     public void postAnimal() throws Exception {
-        Animaldto animalDTO = new Animaldto("Dog","Walking");
+        AnimalDTO animalDTO = new AnimalDTO("Dog","Walking");
 
         mockmvc.perform(post("/zoo/animals")
         .content(objectMapper.writeValueAsString(animalDTO))
