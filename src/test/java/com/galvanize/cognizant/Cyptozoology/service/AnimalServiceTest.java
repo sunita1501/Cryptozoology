@@ -3,6 +3,7 @@ package com.galvanize.cognizant.Cyptozoology.service;
 
 import com.galvanize.cognizant.Cyptozoology.model.AnimalDTO;
 import com.galvanize.cognizant.Cyptozoology.model.AnimalEntity;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -29,6 +30,17 @@ public class AnimalServiceTest {
         verify(mockAnimalRepository).save(
                 new AnimalEntity("Cat", "Walking")
         );
+
+    }
+
+    @Test
+    public void getAnimal() {
+        AnimalDTO animalDTO = new AnimalDTO("Cat", "Walking");
+        subject.create(animalDTO);
+
+        subject.getAllanimals();
+        verify(mockAnimalRepository).findAll();
+        //Assertions.assertThat.
 
     }
 }
