@@ -10,29 +10,23 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/zoo")
-
-
 public class ZooController {
+
     ArrayList<Animaldto> animallist;
+
     public ZooController(){
         animallist = new ArrayList<Animaldto>();
     }
 
-    @PostMapping("/animal")
+    @PostMapping("/animals")
     @ResponseStatus(HttpStatus.CREATED)
-
-
     public void postAnimal(@RequestBody Animaldto animal){
         animallist.add(animal);
-
-
     }
 
-    @GetMapping("/animal")
+    @GetMapping("/animals")
     @ResponseStatus(HttpStatus.OK)
     public ArrayList<Animaldto> getAnimal(){
       return animallist;
-
     }
-
 }

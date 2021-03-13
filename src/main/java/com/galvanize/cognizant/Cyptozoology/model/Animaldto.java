@@ -7,11 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Animaldto {
-
     String name;
     String type;
-
-
 }
