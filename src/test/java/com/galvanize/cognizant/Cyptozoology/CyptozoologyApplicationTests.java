@@ -8,6 +8,8 @@ class CyptozoologyApplicationTests {
 
 	@Test
 	void contextLoads() {
+
+
 	}
 
 }
